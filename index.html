@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio-bootstrap</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+
+    <style>
+        .tab-content .tab-pane {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+        }
+
+        .tab-content .tab-pane img {
+            max-width: 100%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+            margin-right: 20px;
+        }
+
+        .vertical-align-center {
+            display: flex;
+            align-items: center;
+        }
+
+        @media (max-width: 511px) {
+    .vertical-align-center {
+        display: block;
+    }
+}
+
+        .vertical-align-center h2,
+        .vertical-align-center p {
+            margin: 20px;
+        }
+
+        .botao-esportivos,
+        .botao-sedans,
+        .botao-suvs {
+            background-color: black;
+            color: white;
+        }
+
+        .botao-esportivos:hover,
+        .botao-sedans:hover,
+        .botao-suvs:hover {
+            background-color: black;
+            color: gold;
+        }
+
+        .nav-link.active.botao-esportivos,
+        .nav-link.active.botao-sedans,
+        .nav-link.active.botao-suvs {
+            background-color: #fff;
+            color: black;
+        }
+
+        .titulo h1 {
+            color: black;
+            margin-right: 20px;
+        }
+
+        .link-com-sombra {
+            text-decoration: none;
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        .link-com-sombra:hover {
+            box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
+        }
+
+        #cabecalho {
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            background-color: #fff;
+        }
+
+        .botao {
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            background-color: #fff;
+            margin: 5px;
+            border-radius: 9px;
+            padding: 5px;
+        }
+
+
+        .botao:hover {
+            box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
+        }
+
+        .carousel-indicators {
+            display: none;
+        }
+
+        .carros-demonstracao {
+            padding-top: 20px;
+        }
+
+    .container{
+        max-width: 1140px;
+    }
+
+    .carousel-fade .carousel-item {
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.carousel-fade .carousel-item.active {
+    opacity: 1;
+}
+
+        .carrousel-img{
+            box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
+            border-radius: 20px;
+        }
+
+        .carros-demo{
+            border-radius: 10px;
+        }
+
+        .navbar {
+    padding-top: 1px; 
+    padding-bottom: 2px;
+}
+
+.card{
+    margin-bottom: 10%;
+    margin-top: 10%;
+}
+
+.card-body{
+    margin: -10px;
+}
+
+    </style>
+</head>
+
+<body>
+    <header id="cabecalho" class="fixed-top">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <div class="titulo">
+                    <h1>Import shop</h1>
+                </div>
+                <button class="navbar-toggler navbar-toggler-no-outline" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#menu">
+                    <span class="navbar-toggler-icon text-dark"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menu">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark botao" href="#carros"> Nossos produtos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark botao" href="#contato">Contato</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div data-bs-spy="scroll" data-bs-target="#cabecalho">
+        <section id="carros-em-destaque" class="bg-white">
+            <div class="container">
+                <div id="carrosselCarrosEmDestaque" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                    <div class="carousel-inner carrousel-img">
+                        <div class="carousel-item active">
+                            <img src="./imagens/mc-benz.jpg" class="d-block img-fluid">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./imagens/mustang.jpg" class="d-block img-fluid">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./imagens/audi.jpg" class="d-block img-fluid">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carrosselCarrosEmDestaque" role="button"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Anterior</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carrosselCarrosEmDestaque" role="button"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" ariahidden="true"></span>
+                        <span class="visually-hidden">Próximo</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <div data-bs-spy="scroll" data-bs-target="#cabecalho">
+            <section id="carros" class="carros-demonstracao">
+                <div class="container">
+                    <h2>Nossos produtos</h2>
+                    <section id="outros-produtos" class="bg-white">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12 col-md-6 col-lg-4">
+                                    <div class="card"  style="box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);">
+                                        <img src="/imagens/bmw.jpg" class="card-img-top" alt="Produto 1">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Bmw M3</h5>
+                                            <p class="card-text">Veiculo Sedã. Um otimo veiculo para viagens.</p>
+                                            <p class="card-text">Preço: R$ 210.000,00</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-6 col-lg-4">
+                                    <div class="card"  style="box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);">
+                                        <img src="./imagens/jaguar.jpg" class="card-img-top">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Jaguar XK</h5>
+                                            <p class="card-text">Veiculo Sedã. Um otimo veiculo para viagens.</p>
+                                            <p class="card-text">Preço: R$ 326.000,00</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-6 col-lg-4">
+                                    <div class="card"  style="box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);">
+                                        <img src="./imagens/land-rover.jpg" class="card-img-top">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Land Rover</h5>
+                                            <p class="card-text">Veiculo Sedã. Um otimo veiculo para viagens.</p>
+                                            <p class="card-text">Preço: R$ 150.000,00</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-6 col-lg-4">
+                                    <div class="card"  style="box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);">
+                                        <img src="./imagens/mazda.jpg" class="card-img-top" alt="Produto 3">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Mazda Atenza</h5>
+                                            <p class="card-text">Veiculo Sedã. Um otimo veiculo para viagens.</p>
+                                            <p class="card-text">Preço: R$ 60.000,00</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <ul class="nav nav-pills">
+                        <li class="nav-item">
+                            <a class="nav-link active botao-esportivos" data-bs-toggle="tab" href="#aba1">Esportivos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link botao-sedans" data-bs-toggle="tab" href="#aba2">Sedãs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link botao-suvs" data-bs-toggle="tab" href="#aba3">SUVs</a>
+                        </li>
+                    </ul>
+                    <div class="container">
+                        <div class="row">
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="aba1">
+                                    <div class="vertical-align-center">
+                                        <div class="col-md-6 d-flex">
+                                            <img src="./imagens/porsche.jpg" class="carros-demo">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <h2 class="text-large">Porsche Cayman</h2>
+                                            <p class="text-medium">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse impedit
+                                                sint recusandae culpa,
+                                                quibusdam pariatur nisi, ducimus tempora quas quia modi vitae, aut
+                                                ipsam! Mollitia vel
+                                                itaque accusantium soluta illum!</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane" id="aba2">
+                                    <div class="vertical-align-center">
+                                        <div class="col-md-6 d-flex">
+                                            <img src="./imagens/audiRs5.jpg" class="carros-demo">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <h2>Audi Rs5</h2>
+                                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam, neque?
+                                                Ut, corporis? Dolorem
+                                                nemo, impedit debitis sapiente quam accusamus vero dignissimos qui
+                                                ducimus commodi aliquid
+                                                tempore delectus saepe nisi sed?</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane" id="aba3">
+                                    <div class="vertical-align-center">
+                                        <div class="col-md-6 d-flex">
+                                            <img src="./imagens/jeep.jpg" class="carros-demo">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <h2>Ranger Rover</h2>
+                                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident
+                                                voluptas atque earum,
+                                                deserunt nam quo in dolorem suscipit, aliquam placeat nemo animi
+                                                doloremque quasi dolor
+                                                obcaecati facilis reprehenderit corporis amet.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </section>
+
+            <footer id="contato" class="bg-white text-black py-4">
+                <h2 class="ml-0">Contato</h2>
+                <ul class="list-unstyled d-flex justify-content-start">
+                    <li class="mr-3">
+                        <a class="text-black link-com-sombra" href="#">Facebook</a>
+                    </li>
+                    <li>
+                        <a class="text-black link-com-sombra" href="#">Instagram</a>
+                    </li>
+                </ul>
+            </footer>
+
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
